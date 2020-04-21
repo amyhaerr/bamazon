@@ -3,7 +3,7 @@ var inquirer = require ("inquirer");
 var mysql = require("mysql");
 
 var prompt = require("prompt");
-var TABLE = require("cli-table3");
+var Table = require("cli-table3");
 
 var connection = mysql.createConnection({
     host: "localhost",
@@ -24,7 +24,7 @@ showAllProd();
 
 function showAllProd() {
     var sqlQuery = ("SELECT * FROM products");
-    connection.query(sqlQuery, functionn(err,res){
+    connection.query(sqlQuery, function(err,res){
         if (err) throw err;
         var table = new Table({
           head: ['ID', 'Product', 'Department', 'Price', 'In Stock'],
