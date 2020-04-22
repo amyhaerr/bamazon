@@ -75,9 +75,9 @@ function buyItem() {
       } {
         return false;
 
-      },
+      }
     },
-    {
+    // {
       type: "confirm",
       message: `Is your order correct?`,
       name: 'confirmation',
