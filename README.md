@@ -13,6 +13,15 @@ To create an Amazon-like storefront with MySQL and Node JS. The app will take or
         - Inquirer
         - Prompt
         - Cli-table3
+        - Chalk
 4. JavaScript
 5. Node JS
+
+## Customer Demo
+
+1. Presents the customer with a table of all available products
+2. Asks for the ID of the customer's desired product
+3. Asks how many items the customer would like to purchase
+4. Confirms order & updates product inventory in database
+
 
