@@ -13,7 +13,7 @@ To create an Amazon-like storefront with MySQL and Node JS. The app will take or
         - Inquirer
         - Prompt
         - Cli-table3
-        - Chalk
+        
 4. JavaScript
 5. Node JS
 
