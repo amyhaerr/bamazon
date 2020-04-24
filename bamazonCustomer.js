@@ -100,6 +100,11 @@ function buyItem() {
     ])
     // connect to entire table to pull and append data from specific columns
     .then(function (userResponse) {
+      if (userResponse.confirmation === false) {
+        console.log(`Please re-enter your item and quantity`);
+        buyItem();
+      } else {
+
       var query = "SELECT * FROM products WHERE ?";
       // assigning item_id column to user choice
       connection.query(query, {
@@ -107,11 +112,11 @@ function buyItem() {
         }, function (err, response) {
           if (err) throw err;
           // inform customer of how many units they've purchased
-          console.log(`\nYou have purchased: ${userResponse.units} ${response[0].product_name}\n`);
           if (userResponse.units > response[0].stock_quantity) {
             console.log('Insufficient quantity');
             optionMenu();
           } else {
+            console.log(`\nYou have purchased: ${userResponse.units} ${response[0].product_name}\n`);
             console.log('order processing');
             var totalCost = userResponse.units * response[0].price;
             var updatedStock = response[0].stock_quantity - userResponse.units;
@@ -125,5 +130,5 @@ function buyItem() {
         }
 
       )
-    });
+    }});
 };
