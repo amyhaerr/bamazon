@@ -120,10 +120,10 @@ function buyItem() {
             console.log('order processing');
             var totalCost = userResponse.units * response[0].price;
             var updatedStock = response[0].stock_quantity - userResponse.units;
-            var updateTable = "UPDATE products SET stock_quantity = " + updatedStock + " WHERE item_id = " + userResponse.itemID;
+            var updateTable = "UPDATE products SET stock_quantity =  " + updatedStock + " WHERE item_id = " + userResponse.itemID;
             connection.query(updateTable, function (err, response) {
               if (err) throw err;
-              console.log(`\nYour purchase is complete! Your total cost is ${totalCost}\n`);
+              console.log(`\nYour purchase is complete! Your total cost is $ ${totalCost}\n`);
               connection.end();
             })
           }

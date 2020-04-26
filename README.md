@@ -24,4 +24,4 @@ To create an Amazon-like storefront with MySQL and Node JS. The app will take or
 3. Asks how many items the customer would like to purchase
 4. Confirms order & updates product inventory in database
 
-
+<img src= "images/shop.gif">
