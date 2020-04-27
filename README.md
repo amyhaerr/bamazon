@@ -25,3 +25,13 @@ To create an Amazon-like storefront with MySQL and Node JS. The app will take or
 4. Confirms order & updates product inventory in database
 
 <img src= "images/shop.gif">
+
+
+## Author:
+
+Amy Haerr
+
+## Collaborated with:
+1. John Pendergrass
+2. Brooke Guarienti 
+3. Haylee McLemore
